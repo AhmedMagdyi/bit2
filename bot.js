@@ -4,7 +4,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
-const code = '#;
+const code = '#';
 
 client.on('ready', async () => {
     console.log('I am ready!');
