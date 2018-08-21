@@ -17,6 +17,45 @@ if(message.content === "ayy") {
 }
 });
 
+var prefix = "!";
+client.on("message",(message) => {
+    if (message.channel.type !== "text") return;
+    if (!message.content.startsWith(prefix)) return;
+    switch(message.content.split(" ")[0].slice(prefix.length)) {
+        case "tempon" :
+            if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("** You Don't Have Permission `Manage channels` To Do This Command");
+            temp[message.guild.id] = {
+                work : true,
+                channel : "Not Yet"
+            };
+            message.guild.createChannel("اضغط لصنع روم مؤقت", "voice").then(c => {
+                temp[message.guild.id].channel = c.id
+                message.channel.send("** Done.**");
+            });
+        break;
+        case "tempof" :
+        if (!message.member.hasPermission("MANAGE_CHANNELS")) return message.reply("** You Don't Have Permission `Manage channels` To Do This Command");
+            temp[message.guild.id] = {
+                work : false,
+                channel : "Not Yet"
+            };
+        message.channel.send("** Done.**");
+    };
+});
+client.on("voiceStateUpdate", (o,n) => {
+    if (!temp[n.guild.id]) return;
+    if (temp[n.guild.id].work == false) return;
+    if (n.voiceChannelID == temp[n.guild.id].channel) {
+        n.guild.createChannel(n.user.username, 'voice').then(c => {
+            n.setVoiceChannel(c);
+        })
+    };
+    if (!o.guild.channels.get(o.voiceChannelID)) return
+    if (o.guild.channels.get(o.voiceChannelID).name == o.user.username) {
+        o.voiceChannel.delete();
+    };
+})
+
 client.on('message',async message => {
     if(message.content.startsWith(code + "js")) {
   if(!message.channel.guild) return message.reply(' ');
