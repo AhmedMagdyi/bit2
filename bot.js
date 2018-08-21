@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const code = '#';
-const ayy = client.emojis.find("name", "hi");
 
 
 client.on('ready', Ryu => {
