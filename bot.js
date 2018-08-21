@@ -1,5 +1,16 @@
+
+
+
+const Discord = require("discord.js");
+const client = new Discord.Client();
+const fs = require('fs');
 const code = '#;
 
+client.on('ready', async () => {
+    console.log('I am ready!');
+
+    client.user.setGame("Alpha Codes.", "https://www.twitch.tv/idk");
+});
 client.on('message',async message => {
     if(message.content.startsWith(code + "js")) {
   if(!message.channel.guild) return message.reply(' ');
