@@ -3,15 +3,10 @@ const client = new Discord.Client();
 const fs = require('fs');
 const code = '#';
 
-client.on('ready', () => {
-   console.log(`----------------`);
-        console.log(`---------------`);
-      console.log(`ON ${client.guilds.size} Servers `);
-    console.log(`---------------`);
-  console.log(`Logged in as ${client.user.tag}!`);
-  client.user.setActivity(`Alpha Codes.`, {type: "PLAYING"});
+client.on('ready', Ryu => {
+  client.user.setGame("Alpha Codes.", "https://www.twitch.tv/idk");
+  console.log(`${client.username}, is fking ready ^,^`);
 });
-
 client.on('message',async message => {
     if(message.content.startsWith(code + "js")) {
   if(!message.channel.guild) return message.reply(' ');
@@ -96,7 +91,7 @@ ${thisMessage}\`\`\`
 
 
 
-const adminprefix = "js";
+const adminprefix = "j";
 const devs = ['426295568688611328', '431150885549113344'];
  
 
