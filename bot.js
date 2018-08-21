@@ -2,11 +2,22 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const fs = require('fs');
 const code = '#';
+const ayy = client.emojis.find("name", "hi");
+
 
 client.on('ready', Ryu => {
   client.user.setGame("Alpha Codes.", "https://www.twitch.tv/idk");
   console.log(`${client.username}, is fking ready ^,^`);
 });
+
+
+client.on('message', message => {
+if(message.content === "ayy") {
+   const ayy = client.emojis.find("name", "hi");
+   message.reply(`${hi} LMAO`);
+}
+});
+
 client.on('message',async message => {
     if(message.content.startsWith(code + "js")) {
   if(!message.channel.guild) return message.reply(' ');
