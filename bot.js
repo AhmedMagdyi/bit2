@@ -10,12 +10,7 @@ client.on('ready', Ryu => {
 });
 
 
-client.on('message', message => {
-if(message.content === "ayy") {
-   const ayy = client.emojis.find("name", "hi");
-   message.reply(`${hi} LMAO`);
-}
-});
+
 
 var prefix = "!";
 client.on("message",(message) => {
