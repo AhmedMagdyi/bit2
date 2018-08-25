@@ -70,11 +70,11 @@ client.on('message',async message => {
           }
           if(collected.first().content === 'نعم') {
             if(thisFalse === false) return;
-            msg.edit(':dove: **| Done <:ErrOr:481354064098230292>, تم بنجاح نشر كودك في روم الاكواد**');
+            msg.edit(':dove: **| Done <:ErrOr:440825366093889536>, تم بنجاح نشر كودك في روم الاكواد**');
             collected.first().delete();
             jscodes.send(`@everyone | @here
 **Code Alpha© :arrow_down:**
-<:ErrOr:481354064098230292>
+<:ErrOr:440825366093889536>
 \`\`\`js
 ${thisMessage}\`\`\`
 **وصف الكود**: ${boi}
