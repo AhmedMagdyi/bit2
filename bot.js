@@ -72,7 +72,6 @@ client.on('message',async message => {
             if(thisFalse === false) return;
             msg.edit(':dove: **| Done <:ErrOr:440825366093889536>, تم بنجاح نشر كودك في روم الاكواد**');
             collected.first().delete();
-    let hi = new Discord.RichEmbed()
             jscodes.send(`@everyone | @here
 **AlphaCodes© <:js:482928068198137857>**
 \`\`\`js
@@ -83,7 +82,6 @@ ${thisMessage}\`\`\`
 
 .setAuthor("hi ", icon_url = "https://cdn.discordapp.com/emojis/482926292917026826.gif?v=1")
 
-    message.channel.send(hi)
 
           }
         }
