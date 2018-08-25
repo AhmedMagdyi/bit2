@@ -73,7 +73,7 @@ client.on('message',async message => {
             msg.edit(':dove: **| Done <:ErrOr:440825366093889536>, تم بنجاح نشر كودك في روم الاكواد**');
             collected.first().delete();
             jscodes.send(`@everyone | @here
-**Code Alpha© :arrow_down:**
+**AlphaCodes© <:js:482928068198137857>**
 <:ErrOr:440825366093889536>
 \`\`\`js
 ${thisMessage}\`\`\`
