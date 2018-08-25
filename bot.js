@@ -70,7 +70,7 @@ client.on('message',async message => {
           }
           if(collected.first().content === 'نعم') {
             if(thisFalse === false) return;
-            msg.edit(':dove: **| Done <:ErrOr:481355480615223297>, تم بنجاح نشر كودك في روم الاكواد**');
+            msg.edit(':dove: **| Done <:ErrOr:481354064098230292>, تم بنجاح نشر كودك في روم الاكواد**');
             collected.first().delete();
             jscodes.send(`@everyone | @here
 <:ErrOr:482917259019288576> <:hi3:481348857737904140> <:hi4:481348857737904140> <:hi5:481348857737904140> <:hi6:481348857737904140> <:hi7:481348857737904140> <:hi8:481348857737904140>
