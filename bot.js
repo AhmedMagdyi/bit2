@@ -74,7 +74,7 @@ client.on('message',async message => {
             collected.first().delete();
             jscodes.send(`@everyone | @here
 **Code Alpha© :arrow_down:**
-<:smd:481348463938764801>           
+<:ErrOr:481354064098230292>
 \`\`\`js
 ${thisMessage}\`\`\`
 **وصف الكود**: ${boi}
